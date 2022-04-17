@@ -2,14 +2,13 @@
 @layout SimpleL
 
 
-<button @onclick="IniciarSesion"></button> @* cesar *@
-<button @onclick="Registro"></button> @* cesar *@ 
+
 
 
 <div class="login-wrap">
     <div class="login-html">
-        <input @bind="Iniciar" @bind="Regi" id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Inicio de seccion</label> @* cesar *@
-        <input @bind="Iniciar" @bind="Regi" id="tab-2" type="radio" name="tab" class="for-pwd"><label for="tab-2" class="tab">Registrarse</label> @* cesar *@
+        <input @bind="Iniciar"  id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Inicio de seccion</label> @* cesar *@
+        <input @bind="Iniciar"  id="tab-2" type="radio" name="tab" class="for-pwd"><label for="tab-2" class="tab">Registrarse</label> @* cesar *@
 
         <div class="login-form">
 
@@ -17,13 +16,13 @@
                     <div class="group">
                         <br /> <br />
                         <label  for="user" class="label" >Nombre de usuario</label>
-                        <input  @bind="Iniciar" @bind="Regi" name="usuario" type="text"  class="input" > @* cesar *@ 
+                        <input  @bind="Nombre"  name="usuario" type="text"  class="input" > @* cesar *@ 
                         
 
                     </div>
                     <div class="group">
                         <label for="pass" class="label">Contraseña</label>
-                        <input name="contra" type="password" class="input" @bind="Iniciar" @bind="Regi" data-type="password">  @* cesar *@
+                        <input @bind="contra" name="contra" type="password" class="input"  data-type="password">  @* cesar *@
                     </div>
 
                     <br /> <br />
@@ -38,45 +37,45 @@
 
                     <div class="group">
                         <label for="pass" class="label">Nombre</label>
-                        <input @bind="Iniciar" @bind="Regi" name="usuario" type="text" class="input"> @* cesar *@
+                        <input @bind="Nombre"  name="usuario" type="text" class="input"> @* cesar *@
                     </div>
 
                     <div class="group">
                         <label for="pass" class="label">Apellido</label>
-                        <input @bind="Iniciar" @bind="Regi" name="contra" type="password" class="input" data-type="password"> @* cesar *@
+                        <input @bind="contra" name="contra" type="password" class="input" data-type="password"> @* cesar *@
                     </div>
 
                     <div class="group">
                         <br /> <br />
                         <label for="user" class="label">Cedula</label>
-                        <input @bind="Iniciar" @bind="Regi" name="cedula" type="text" class="input"> @* cesar *@
+                        <input @bind="Cedula" name="cedula" type="text" class="input"> @* cesar *@
                     </div>
 
                     <div class="group">
                         <br /> <br />
                         <label for="user" class="label">Celular</label>
-                        <input @bind="Iniciar" @bind="Regi" name="cedula" type="text" class="input"> @* cesar *@ 
+                        <input @bind="Cedula" name="cedula" type="text" class="input"> @* cesar *@ 
                     </div>
 
                     <div class="group">
                         <br /> <br />
                         <label for="user" class="label">Correo</label>
-                        <input @bind="Iniciar" @bind="Regi" name="cedula" type="text" class="input"> @* cesar *@
+                        <input @bind="Cedula"  name="cedula" type="text" class="input"> @* cesar *@
                     </div>
 
                     <div class="group">
                         <label for="pass" class="label">Nombre de usuario</label>
-                        <input @bind="Iniciar" @bind="Regi" name="usuario" type="text" class="input"> @* cesar *@
+                        <input @bind="Nombre" name="usuario" type="text" class="input"> @* cesar *@
                     </div>
 
                     <div class="group">
                         <label for="pass" class="label">Contraseña</label>
-                        <input @bind="Iniciar" @bind="Regi" name="contra" type="password" class="input" data-type="password"> @* cesar *@ 
+                        <input @bind="contra"  name="contra" type="password" class="input" data-type="password"> @* cesar *@ 
                     </div>
 
                      <div class="group">
                         <label for="pass" class="label">Validar contraseña</label>
-                        <input @bind="Iniciar" @bind="Regi" name="contra" type="password" class="input" data-type="password"> @* cesar *@
+                        <input @bind="contra"  name="contra" type="password" class="input" data-type="password"> @* cesar *@
                     </div>
 
                     <br /> <br />
@@ -296,12 +295,16 @@
  
 @*  cesar  *@
 
-private string Iniciar = "";
+private string Nombre = "";
+private string contra = "";
+
+private string Cedula = "";
+
+
 private void IniciarSesion(){
  
 }
 
-    private string Regi = "";
 
 private void Registro(){ 
 
